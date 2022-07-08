@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <>
-      <Disclosure as="nav" className="bg-zinc-900  w-full z-10 m-0 flex flex-col items-center justify-between sm:items-center p-6 lg:flex-row lg:h-24">
+      <Disclosure as="nav" className="bg-zinc-900 h-full w-full z-10 m-0 flex flex-col items-center justify-between sm:items-center p-6 lg:flex-row lg:h-16">
         <>
           <div id="reconocimientos" className="w-full lg:w-1/3 flex justify-center lg:justify-start">
             <p className="text-lg">

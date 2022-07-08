@@ -1,6 +1,10 @@
+import styles from '@styles/Index.module.scss'
+
 export default function Home() {
+
   return (
     <>
+    <div className={styles['container']}>
       <div className="relative w-10/12 mx-auto">
         <div className="w-10/12 h-1/3">
           <div className="relative z-10 pb-8 bg-noir h-1/2 sm:pb-16 md:pb-20 lg:max-w-4xl lg:w-full lg:pb-28 xl:pb-32">
@@ -62,6 +66,7 @@ export default function Home() {
       </div>
       <div className="block w-10/11 mx-auto mt-40">
         <p className="text-center font-edu text-7xl text-stone-900">Web developer: Doing what I love</p>
+      </div>
       </div>
     </>
   );

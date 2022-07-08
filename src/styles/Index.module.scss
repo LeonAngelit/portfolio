@@ -1,0 +1,9 @@
+.container{
+  height: 90vh;
+}
+
+@media (max-height: 500px){
+  .container{
+    height: auto;
+  }
+}
