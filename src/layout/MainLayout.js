@@ -4,14 +4,12 @@ import Footer from '@components/Footer';
 export default function MainLayout({ children }) {
   return (
     <>
-      <div className="min-h-full">
         <Header />
         <Nav />
         <main>
-          <div className="max-w-80vw mx-auto py-6 sm:px-6 lg:px-8">{children}</div>
-          <Footer />
+          <div className="max-w-80vw h-auto mx-auto py-6 sm:px-6 lg:px-8">{children}</div>
         </main>
-      </div>
+        <Footer />
     </>
   );
 }
