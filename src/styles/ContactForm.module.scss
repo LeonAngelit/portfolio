@@ -1,0 +1,244 @@
+
+.contactForm{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.contactForm *{
+  color: rgba(0, 0, 0, 0.85);
+  position: relative;
+}
+
+.contactForm label{
+  color: whitesmoke;
+}
+
+.formContainer{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.formInputs{
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.formInputs > label{
+  width: 20%;
+  text-align: left;
+  margin-top: .5rem;
+  font-size: 1.5rem;
+}
+
+.formInputs > input{
+  width: 75%;
+  padding-left: 0.2rem;
+  font-size: 1.2rem;
+  margin-top: .5rem;
+  background-color: rgba(255,255,255,0.2);
+  color: whitesmoke;
+}
+
+.formInputs > input:-webkit-autofill {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: whitesmoke;
+}
+
+.formInputs > input::placeholder{
+ 
+  color: rgba(245,245,245, 0.5);
+  
+}
+
+.form_message{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.form_message > label{
+ text-align: left;
+ width: 100%;
+ font-size: 1.5rem;
+}
+
+.form_message > textarea{
+  resize: none;
+  width: 100%;
+  padding-left: .5rem;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.form_message > textarea::placeholder{
+ 
+  color: rgba(245,245,245, 0.5);
+  
+}
+.contactForm input:focus, .contactForm textarea:focus{
+  outline: none;
+}
+
+.contactForm .error{
+  box-shadow: 0px 0px .4rem .1rem rgb(146, 16, 16);
+}
+
+
+.spanError{
+  background-color: rgb(146,16,16);
+  margin-left: 20%;
+  width: 75%;
+  border-radius: .2rem;
+  z-index: -1;
+  transition: all 1s;
+  transform: translateY(-100%);
+  visibility: hidden;
+  height: 1rem;
+}
+
+.spanError.visible{
+  height: auto;
+}
+
+.spanError.visible > p {
+  font-size: 1.2rem;
+ color: whitesmoke;
+}
+.send_button{
+  background-color: #91c13e;
+  border: none;
+  width: 20%;
+  height: 5vh;
+  max-height: 30px;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: bold;
+  border-radius: 0.2rem;
+  font-size: 1.5rem;
+}
+
+.send_button:hover{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: whitesmoke;
+  outline: 0.15rem solid #91c13e;
+
+}
+
+.send_button:active{
+  color: #91c13e;
+}
+
+.modal{
+  position: fixed;
+  display: flex;
+  top:25%;
+  left: 25%;
+  width: 50vw;
+  height: 50vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  transform: translateY(100vh);
+  visibility: hidden;
+  transition: all 1s;
+}
+
+.modal_content{
+  position: fixed;
+  display: flex;
+  width: 80%;
+  height: 20%;
+  background-color: #91c13e;
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.85);
+  border-radius: 2rem;
+  align-items: center;
+  transition: all 1s;
+}
+
+.modal_content > p{
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.close_button{
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  width: 3vw;
+  height: 3vw;
+  min-width: 40px;
+  min-height: 40px;
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+  display: flex;
+  border-radius: 50%;
+}
+
+.close_button:hover{
+  cursor: pointer;
+}
+
+.close_button > img {
+  object-fit: cover;
+  width: 100%;
+}
+
+
+.visible{
+ transform: translateY(0);
+  visibility: visible;
+  display: block;
+  transition: all 1s;
+}
+
+@media (max-width: 1200px) {
+  .title > h3 {
+    text-align: center;
+  }
+
+
+  .formInputs{
+    width: 100%;
+  }
+
+  .form_message{
+    width: 100%;
+   
+  }
+
+
+}
+
+
+@media (max-width: 550px) {
+  .formContainer{
+    width: 100%;
+  }
+
+  .modal{
+    width: 100vw;
+    height: 30vh;
+    left: 0;
+  }
+
+  .modal_content{
+    width: 90%;
+    height: 10%;
+  }
+
+}
+
+
+
+
+
