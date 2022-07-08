@@ -1,5 +1,5 @@
 import ContactForm from '@components/ContactForm';
-import InfoElement from '@components/infoElement';
+import InfoElement from '@components/InfoElement';
 import ModalComponent from '@components/Modal';
 import styles from '@styles/AboutList.module.scss';
 import { useState } from 'react';
