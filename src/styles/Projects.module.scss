@@ -2,7 +2,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 74vh;
   }
   
   .works_container{
@@ -130,6 +129,30 @@
     }
   }
 
+
+  @media (max-width: 500px){
+    .works{
+      height: 80vh;
+    }
+  }
+
+  @media (min-width: 500px), (max-width: 800px) {
+    .works{
+      height: 85vh;
+    }
+    }
+
+  @media(min-width: 800px){
+    .works{
+      height: 90vh;
+    }
+    .left, .right{
+      top:15%;
+    }
+    
+   
+   
+  }
 
   @media (max-height: 500px){
     .works_container{
