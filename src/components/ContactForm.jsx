@@ -19,7 +19,7 @@ export default function ContactForm({ handleModal }) {
     let spanPhone = document.getElementById('spanPhone');
     let inputSubject = document.getElementById('inputSubject');
     let spanSubject = document.getElementById('spanSubject');
-    let regexName = /^([a-zA-Z]\s*\.*){2,9}$/;
+    let regexName = /^([a-zA-ZÀ-ÿ\u00f1\u00d1]\s*\.*){2,60}$/;
     let regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     let regexPhone = /^[6798]\d{8}$/;
     let regexSubject = /^([a-zA-ZÀ-ÿ\.\d]\s*){1,60}$/;
