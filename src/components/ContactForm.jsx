@@ -101,7 +101,7 @@ export default function ContactForm({ handleModal }) {
       if (res.status == 200) {
         handleModal({ open: true, success: 'success', content: '¡Mensaje enviado correctamente!' });
       } else {
-        handleModal({ open: true, success: 'fail', content: `Ha habido un error: ${res.data.statusCode}: ${res.data.error}`});
+        handleModal({ open: true, success: 'fail', content: `Ha habido un error: ${res.data.statusCode}: ${res.data.error}` });
       }
       event.target.reset();
       setTimeout(() => {
