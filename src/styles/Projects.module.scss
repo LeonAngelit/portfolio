@@ -17,11 +17,14 @@
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     margin-bottom: 2rem;
+    scrollbar-width: none;
   }
   
   .works_container::-webkit-scrollbar{
     display: none;
   }
+
+
   
   .descriptions .description {
     text-align: center;

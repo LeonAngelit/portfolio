@@ -143,7 +143,7 @@ export default function ContactForm({ handleModal }) {
           <span className={styles['spanError']} id="spanText">
             <p>Incluye un mensaje</p>
           </span>
-          <input type="submit" name="submit" defaultValue="Enviar" className={styles['send_button']} id="sendForm" />
+          <input type="submit" name="submit" defaultValue="Enviar" value="Enviar" className={styles['send_button']} id="sendForm" />
         </div>
       </div>
     </form>
