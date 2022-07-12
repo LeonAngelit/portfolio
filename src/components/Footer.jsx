@@ -22,7 +22,7 @@ export default function Footer() {
             <p className="text-lg">Leon Angelit {date.getFullYear()}</p>
           </div>
           <div id="redes" className="w-1/3 flex  justify-center lg:justify-end mt-2">
-            <ul className="flex justify-evenly w-3/5">
+            <ul className="flex justify-evenly w-full">
               <li>
                 <a href="https://www.linkedin.com/in/jcnfksnxkckfn/" target={'_blank'} rel="noopener noreferrer">
                   <img className="w-8 h-8" src={socialIcons.Linkedin} alt="LinkedIn" />
