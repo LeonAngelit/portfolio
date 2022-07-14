@@ -13,7 +13,6 @@ export default function InfoElement({ title, content, collapse = true }) {
               id="arrowImg"
               className={styles['arrowimg']}
               onClick={(event) => {
-                console.log(event.target.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes);
                 event.target.classList.toggle(styles['rotated']);
                 event.target.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes[1].classList.toggle(styles['contentHided']);
               }}

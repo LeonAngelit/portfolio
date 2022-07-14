@@ -77,7 +77,6 @@ export default function ContactForm({ handleModal }) {
     event.preventDefault();
     let values = {};
     if (phoneRef.current.value == '') {
-      console.log('excepcion');
       values = {
         mailSender: emailRef.current.value,
         name: nameRef.current.value,
@@ -95,9 +94,7 @@ export default function ContactForm({ handleModal }) {
     }
 
     if (validateForm(values.name, values.mailSender, values.phone, values.subject) == 0) {
-      console.log(values);
       const res = await sendMail(values);
-      console.log(res);
       if (res.status == 200) {
         handleModal({ open: true, success: 'success', content: '¡Mensaje enviado correctamente!' });
       } else {
