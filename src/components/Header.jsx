@@ -37,7 +37,7 @@ export default function Header() {
                       ))}
                     </div>
                   </div>
-                  <p className="text-bg-green text-2xl ml-12">v.1.0</p>
+                  <p className="text-bg-green text-2xl ml-12">v.1.0.1</p>
                 </div>
 
                 <div className="-mr-2 flex md:hidden">

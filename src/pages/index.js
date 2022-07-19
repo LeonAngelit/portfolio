@@ -18,7 +18,7 @@ export default function Home() {
               </svg>
 
               <div className="flex-col overflow-visible lg:pl-20">
-                <div id="name" className="flex pt-40 w-full ">
+                <div id="name" className="flex pt-40 w-full">
                   <div>
                     <p className="text-9xl hover:scale-150 transition 1s hover:text-bg-green hover:font-bold">L</p>
                   </div>
@@ -63,8 +63,8 @@ export default function Home() {
             <img className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="/photo_2020-03-01_16-51-23.jpg" alt="" />
           </div>
         </div>
-        <div className="block w-10/11 mx-auto mt-40">
-          <p className="text-center font-edu text-7xl text-stone-900">Web developer: Doing what I love</p>
+        <div className="block w-full h-1/6 mx-auto mt-40 whitespace-nowrap overflow-hidden  animate-type">
+          <p className="text-center font-edu text-7xl text-stone-400">Software developer: Doing what I love</p>
         </div>
       </div>
     </>
