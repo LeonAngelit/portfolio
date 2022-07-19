@@ -13,12 +13,17 @@ export default function InfoElement({ title, content, collapse = true }) {
               id="arrowImg"
               className={styles['arrowimg']}
               onClick={(event) => {
-                event.target.classList.toggle(styles['rotated']);
-                event.target.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes[1].classList.toggle(styles['contentHided']);
+                console.log(event.target);
+                if (event.target.matches('#arrowImage')) {
+                  event.target.classList.toggle(styles['rotated']);
+                  event.target.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes[1].classList.toggle(styles['contentHided']);
+                }
               }}
               onKeyDown={(event) => {
-                event.target.classList.toggle(styles['rotated']);
-                event.target.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes[1].classList.toggle(styles['contentHided']);
+                if (event.target.matches('#arrowImage')) {
+                  event.target.classList.toggle(styles['rotated']);
+                  event.target.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes[1].classList.toggle(styles['contentHided']);
+                }
               }}
               tabIndex={'0'}
               role={'button'}
