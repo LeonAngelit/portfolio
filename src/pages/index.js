@@ -63,7 +63,7 @@ export default function Home() {
             <img className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="/photo_2020-03-01_16-51-23.jpg" alt="" />
           </div>
         </div>
-        <div className="block w-full h-1/6 mx-auto mt-40 whitespace-nowrap lg:overflow-hidden lg:animate-type">
+        <div className="block w-full lg:h-1/6 mx-auto mt-40 lg:whitespace-nowrap lg:overflow-hidden lg:animate-type">
           <p className="text-center font-edu text-7xl text-stone-400">Software developer: Doing what I love</p>
         </div>
       </div>
