@@ -6,10 +6,10 @@ const useUpdateCourses = (API) => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await setTimeout(() => axios(API), 2000);
+      const response = await axios(API);
       setCourses(response.data);
     }
-    fetchData();
+    setTimeout(() => fetchData(), 2000);
   }, []);
   return courses;
 };

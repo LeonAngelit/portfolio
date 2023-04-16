@@ -12,7 +12,6 @@ const navigation = [
 
 export default function Header() {
   const router = useRouter();
-  console.log(router.pathname);
   return (
     <>
       <Disclosure as="nav" className="fixed w-full bg-zinc-900 z-10">

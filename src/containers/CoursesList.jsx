@@ -8,17 +8,19 @@ const API = process.env.NEXT_PUBLIC_API_COURSES;
 const CoursesList = () => {
   const [courses, setCourses] = useState([]);
   let coursesProv = useGetCourses(API);
-  let coursesUpdated = useUpdateCourses(`${API}/update`);
-  setTimeout(() => {
-    coursesProv = coursesUpdated;
-  }, 1000);
+  let coursesUpdate = useUpdateCourses(`${API}/update`);
+
   useEffect(() => {
     setCourses(coursesProv);
   }, [coursesProv]);
 
+  useEffect(() => {
+    setCourses(coursesUpdate);
+  }, [coursesUpdate]);
+
   return (
     <>
-      <h1 className={styles['title']}>Actualmente he realizado {courses.length} cursos</h1>
+      <h1 className={styles['title']}>Actualmente he realizado {courses?.length} cursos</h1>
       <h2 className={styles['subtitle']}>
         Haz clic en las tarjetas para ver el diploma. Estos cursos los he realizado en{' '}
         <a className={styles['subtitle_link']} href="https://platzi.com/" target="_blank" rel="noopener noreferrer">
@@ -27,7 +29,7 @@ const CoursesList = () => {
         🙂
       </h2>
       <section id="cards-container" className={styles['cards-container']}>
-        {courses.map((course) => (
+        {courses?.map((course) => (
           <CourseCard course={course} key={courses.indexOf(course)} />
         ))}
       </section>
