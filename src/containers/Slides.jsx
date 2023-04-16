@@ -2,7 +2,6 @@ import styles from '@styles/Projects.module.scss';
 import { useEffect } from 'react';
 import projectList from '../assets/projectList';
 import Slide from '@components/Slide';
-import { memo } from 'react';
 const SlidesContainer = () => {
   const projects = Array.from(projectList);
   useEffect(() => {
@@ -95,4 +94,4 @@ const SlidesContainer = () => {
   );
 };
 
-export default memo(SlidesContainer);
+export default SlidesContainer;

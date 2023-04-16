@@ -28,7 +28,7 @@ const AboutList = () => {
         <div className={styles['img_border']} />
         <img src="/aboutimg.jpg" layout="fill" alt="foto mia" className={styles['avatar']} />
       </div>
-      <section className={styles['info_container']}>
+      <section>
         <InfoElement
           title={'Pefil personal'}
           content={
@@ -93,7 +93,7 @@ const AboutList = () => {
           key={'Info4'}
         />
       </section>
-      <section id="contactSection">
+      <section className={styles['info_container']} id="contactSection">
         <InfoElement title={'Contacto'} content={<ContactForm handleModal={setModal} />} collapse={false} key={'Info5'} />
       </section>
       {modal.open && <ModalComponent visible={modal.open} success={modal.success} content={modal.content} handleClick={() => setModal(false)} />}
