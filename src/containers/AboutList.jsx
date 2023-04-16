@@ -20,11 +20,11 @@ const AboutList = () => {
     }
   }
 
-  const [modal, setModal] = useState({open: false, success: null, content: null});
+  const [modal, setModal] = useState({ open: false, success: null, content: null });
 
   return (
     <>
-      <div className={styles['img_container']}>
+      <div className={styles['img_container']} id="profile">
         <div className={styles['img_border']} />
         <img src="/aboutimg.jpg" layout="fill" alt="foto mia" className={styles['avatar']} />
       </div>
@@ -48,10 +48,10 @@ const AboutList = () => {
           title={'Idiomas'}
           content={
             <ul>
-              <li key='li1'>
+              <li key="li1">
                 <p>🇬🇧 Inglés: B2 Universidad de Sevilla</p>
               </li>
-              <li key='li2'>
+              <li key="li2">
                 <p>🇪🇸 Español: Nativo </p>
               </li>
             </ul>
@@ -59,24 +59,44 @@ const AboutList = () => {
           key={'Info3'}
         />
 
-        <InfoElement 
-        title={'Intereses Personales'}
-        content={
-          <ul>
-            <li  key='int1'><p>Aprendizaje contínuo <span>📚</span></p></li>
-            <li  key='int2'><p>Música <span>🎵</span></p></li>
-            <li  key='int3'><p>Ejercicio físico, nutrición y bienestar <span>🏋️‍♂️</span></p></li>
-            <li  key='int4'><p>Tecnología blockchain <span>🧬</span></p></li>
-            <li  key='int5'><p>Cultura oriental <span>🏯</span></p></li>
-          </ul>
-        }
-        key={'Info4'}
+        <InfoElement
+          title={'Intereses Personales'}
+          content={
+            <ul>
+              <li key="int1">
+                <p>
+                  Aprendizaje contínuo <span>📚</span>
+                </p>
+              </li>
+              <li key="int2">
+                <p>
+                  Música <span>🎵</span>
+                </p>
+              </li>
+              <li key="int3">
+                <p>
+                  Ejercicio físico, nutrición y bienestar <span>🏋️‍♂️</span>
+                </p>
+              </li>
+              <li key="int4">
+                <p>
+                  Tecnología blockchain <span>🧬</span>
+                </p>
+              </li>
+              <li key="int5">
+                <p>
+                  Cultura oriental <span>🏯</span>
+                </p>
+              </li>
+            </ul>
+          }
+          key={'Info4'}
         />
       </section>
       <section id="contactSection">
         <InfoElement title={'Contacto'} content={<ContactForm handleModal={setModal} />} collapse={false} key={'Info5'} />
       </section>
-      {modal.open && <ModalComponent visible={modal.open} success={modal.success} content={modal.content} handleClick={() => setModal(false)}/>}
+      {modal.open && <ModalComponent visible={modal.open} success={modal.success} content={modal.content} handleClick={() => setModal(false)} />}
     </>
   );
 };

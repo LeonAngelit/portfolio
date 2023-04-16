@@ -1,36 +1,35 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Roboto:wght@300;400&display=swap');
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 62.5%;
-    font-family: 'Quicksand', sans-serif;
-    color: whitesmoke;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Quicksand', sans-serif;
+  color: whitesmoke;
+  scroll-behavior: smooth;
 }
 
-body{
-    background-color: rgba(0,0,0,0.85);
+body {
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
-h2{
+h2 {
   font-size: 3rem;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #91c13e;
-    border-radius: 10px;
-  }
+  width: 10px;
+}
 
-  :root{
-    scrollbar-color: #91c13e #262626;
-    scrollbar-width: thin;
-  }
+::-webkit-scrollbar-thumb {
+  background: #91c13e;
+  border-radius: 10px;
+}
+
+:root {
+  scrollbar-color: #91c13e #262626;
+  scrollbar-width: thin;
+}

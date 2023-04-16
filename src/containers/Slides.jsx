@@ -70,7 +70,7 @@ const SlidesContainer = () => {
 
   return (
     <>
-      <section className={styles['works']}>
+      <section className={styles['works']} id="work">
         <button className={`${styles['button_slide']} ${styles['left']}`} id="scroll_left">
           <img src="/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="previous" />
         </button>

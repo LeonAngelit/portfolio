@@ -2,12 +2,13 @@ import React, { memo, useState, useEffect } from 'react';
 import useGetCourses from '@hooks/useGetCourses';
 import CourseCard from '@components/CourseCard';
 import styles from '@styles/CourseList.module.scss';
+import useUpdateCourses from '@hooks/useUpdateCourses';
 const API = process.env.NEXT_PUBLIC_API_COURSES;
 
 const CoursesList = () => {
   const [courses, setCourses] = useState([]);
   let coursesProv = useGetCourses(API);
-  let coursesUpdated = useGetCourses(`${API}/update`);
+  let coursesUpdated = useUpdateCourses(`${API}/update`);
   setTimeout(() => {
     coursesProv = coursesUpdated;
   }, 1000);

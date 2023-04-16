@@ -2,42 +2,47 @@
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 const navigation = [
-  { name: 'Sobre mí', href: '/perfil', current: true },
+  { name: 'Sobre mí', href: '#profile', current: true },
+  { name: 'Proyectos', href: '#work', current: false },
   { name: 'Cursos', href: '/cursos', current: false },
-  { name: 'Proyectos', href: '/proyectos', current: false },
 ];
 
 export default function Header() {
+  const router = useRouter();
+  console.log(router.pathname);
   return (
     <>
-      <Disclosure as="nav" className="bg-zinc-900">
+      <Disclosure as="nav" className="fixed w-full bg-zinc-900 z-10">
         {({ open }) => (
           <>
             <div className="max-w-100vw mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between h-16">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <Link href="/">
+                    <Link href="/" scroll={true}>
                       <img className="h-14 w-14 hover:cursor-pointer" src="/icono.png" alt="Home" />
                     </Link>
                   </div>
                   <div className="hidden md:block">
                     <div className="ml-10 flex items-baseline space-x-4">
-                      {navigation.map((item) => (
-                        <Link key={item.name} href={item.href}>
-                          <p
-                            className="text-white hover:bg-bg-green hover:text-white px-3 py-2 rounded-md text-2xl font-medium hover:cursor-pointer"
-                            aria-current={item.current ? 'page' : undefined}
-                            onFocus={() => (event.target.className = `bg-gray-900 text-white px-3 py-2 rounded-md text-2xl font-medium`)}
-                          >
-                            {item.name}
-                          </p>
-                        </Link>
-                      ))}
+                      {!router.pathname.includes('cursos') &&
+                        navigation.map((item) => (
+                          <Link key={item.name} href={item.href} scroll={true}>
+                            <p
+                              className="text-white hover:bg-bg-green hover:text-white px-3 py-2 rounded-md text-2xl font-medium hover:cursor-pointer"
+                              aria-current={item.current ? 'page' : undefined}
+                              onFocus={() => (event.target.className = `bg-gray-900 text-white px-3 py-2 rounded-md text-2xl font-medium`)}
+                            >
+                              {item.name}
+                            </p>
+                          </Link>
+                        ))}
                     </div>
                   </div>
-                  <p className="text-bg-green text-2xl ml-12">v.1.0.1</p>
+                  <p className="text-bg-green text-2xl ml-12">v.2.0.0</p>
                 </div>
 
                 <div className="-mr-2 flex md:hidden">
