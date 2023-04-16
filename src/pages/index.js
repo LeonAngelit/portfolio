@@ -66,7 +66,7 @@ export default function Home() {
           </div>
         </div>
         <div className="block lg:w-full lg:h-2/6 padding pb-6 mx-auto mt-40 lg:whitespace-nowrap lg:overflow-hidden lg:animate-type">
-          <p className="text-center font-mono text-7xl text-stone-400">Software developer: Doing what I love</p>
+          <p className="text-center font-mono text-7xl text-stone-400 leading-relaxed">Software developer: Doing what I love</p>
         </div>
         <AboutList />
         <SlidesContainer />
