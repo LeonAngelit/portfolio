@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <div className={styles['container']}>
-        <div className="relative w-10/12 mx-auto">
+        <div className="relative w-10/12 mx-auto z-0">
           <div className="w-10/12 h-1/3">
             <div className="relative z-10 pb-8 bg-noir h-1/2 sm:pb-16 md:pb-20 lg:max-w-full lg:w-8/12 lg:pb-28 xl:pb-32">
               <svg
