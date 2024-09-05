@@ -12,6 +12,7 @@ const CoursesList = () => {
 
   useEffect(() => {
     setCourses(coursesProv);
+    console.log(courses.length);
   }, [coursesProv]);
 
   useEffect(() => {
@@ -20,14 +21,20 @@ const CoursesList = () => {
 
   return (
     <>
-      <h1 className={styles['title']}>Actualmente he realizado {courses?.length} cursos</h1>
-      <h2 className={styles['subtitle']}>
-        Haz clic en las tarjetas para ver el diploma. Estos cursos los he realizado en{' '}
-        <a className={styles['subtitle_link']} href="https://platzi.com/" target="_blank" rel="noopener noreferrer">
-          Platzi
-        </a>{' '}
-        🙂
-      </h2>
+      {courses?.length != 0 ? (
+        <>
+          <h1 className={styles['title']}>Actualmente he realizado {courses?.length} cursos</h1>
+          <h2 className={styles['subtitle']}>
+            Haz clic en las tarjetas para ver el diploma. Estos cursos los he realizado en{' '}
+            <a className={styles['subtitle_link']} href="https://platzi.com/" target="_blank" rel="noopener noreferrer">
+              Platzi
+            </a>{' '}
+            🙂
+          </h2>
+        </>
+      ) : (
+        <h1 className={styles['title']}>Obteniendo datos...</h1>
+      )}
       <section id="cards-container" className={styles['cards-container']}>
         {courses?.map((course) => (
           <CourseCard course={course} key={courses.indexOf(course)} />
