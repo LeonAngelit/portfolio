@@ -12,7 +12,6 @@ const CoursesList = () => {
 
   useEffect(() => {
     setCourses(coursesProv);
-    console.log(courses.length);
   }, [coursesProv]);
 
   useEffect(() => {
