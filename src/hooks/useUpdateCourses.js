@@ -7,7 +7,7 @@ const useUpdateCourses = (API) => {
   useEffect(() => {
     async function fetchData() {
       const response = await axios(API);
-      await axios.post(API, response);
+      await axios.post(API, response.data);
       setCourses(response.data);
     }
     setTimeout(() => fetchData(), 2000);
