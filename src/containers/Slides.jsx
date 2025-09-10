@@ -1,9 +1,11 @@
 import styles from '@styles/Projects.module.scss';
-import { useEffect } from 'react';
-import projectList from '../assets/projectList';
+import { useEffect, useState } from 'react';
 import Slide from '@components/Slide';
+import useGetProjects from '@hooks/useGetProjects';
+const API = process.env.NEXT_PUBLIC_API_PROJECTS;
 const SlidesContainer = () => {
-  const projects = Array.from(projectList);
+  const [projects, setProjects] = useState([]);
+  const projectsProv = useGetProjects(API);
   useEffect(() => {
     const direccion = window.location.href;
     const works_container = document.getElementsByClassName(styles['works_container'])[0];
@@ -65,6 +67,7 @@ const SlidesContainer = () => {
         left: scrollPrevious(),
         behavior: 'smooth',
       });
+    setProjects(projectsProv);
   });
 
   return (
@@ -78,14 +81,13 @@ const SlidesContainer = () => {
         </button>
         <div className={styles['works_container']}>
           {projects.map((project) => (
-            <Slide image={project.image} link={project.link} title={project.title} id={projects.indexOf(project)} key={`slide${projects.indexOf(project)}`} />
+            <Slide image={project.image} link={project.url} title={project.title} id={projects.indexOf(project)} key={`slide${projects.indexOf(project)}`} />
           ))}
         </div>
         <div className={styles['descriptions']}>
           {projects.map((project) => (
             <div className={styles['description']} id={`ref${projects.indexOf(project)}`} key={`ref${projects.indexOf(project)}`}>
               <h3>{project.title}</h3>
-              <p>{project.description}</p>
             </div>
           ))}
         </div>
