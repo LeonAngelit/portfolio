@@ -136,7 +136,7 @@ export default function ContactForm({ handleModal }) {
         </div>
         <div className={styles['form_message']}>
           <label htmlFor="message">Mensaje:*</label>
-          <textarea name="message" id="areaTexto" cols={30} rows={10} placeholder="Escribe tu mensaje" no-resize="true" required defaultValue={''} ref={messageRef} />
+          <textarea name="message" id="areaTexto" cols={30} rows={10} placeholder="Escribe tu mensaje" style={{ resize: 'none' }} required defaultValue={''} ref={messageRef} />
           <span className={styles['spanError']} id="spanText">
             <p>Incluye un mensaje</p>
           </span>
