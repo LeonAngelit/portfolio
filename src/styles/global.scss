@@ -33,3 +33,10 @@ h2 {
   scrollbar-color: #91c13e #262626;
   scrollbar-width: thin;
 }
+
+@media (max-width:1000px) {
+
+  * {
+    font-size: 62.5%;
+  }
+}
