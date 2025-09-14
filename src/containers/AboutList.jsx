@@ -89,7 +89,7 @@ const AboutList = ({ images }) => {
           key={'Info4'}
         />
       </section>
-      <section className={styles['info_container']} id="projectsSection">
+      <section id="projectsSection">
         <InfoElement title={'Proyectos'} content={<SlidesContainer />} collapse={true} key={'Info5'} />
       </section>
       <section className={styles['info_container']} id="contactSection">
