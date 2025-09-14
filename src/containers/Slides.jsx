@@ -73,12 +73,15 @@ const SlidesContainer = () => {
   return (
     <>
       <section className={styles['works']} id="work">
-        <button className={`${styles['button_slide']} ${styles['left']}`} id="scroll_left">
-          <img src="/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="previous" />
-        </button>
-        <button className={`${styles['button_slide']} ${styles['right']}`} id="scroll_right">
-          <img src="/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="next" />
-        </button>
+        <div id="slide-buttons" className={`${styles['slide-buttons']}`}>
+          <button className={`${styles['button_slide']} ${styles['left']}`} id="scroll_left">
+            <img src="/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="previous" />
+          </button>
+          <button className={`${styles['button_slide']} ${styles['right']}`} id="scroll_right">
+            <img src="/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="next" />
+          </button>
+        </div>
+
         <div className={styles['works_container']}>
           {projects.map((project) => (
             <Slide image={project.image} link={project.url} title={project.title} id={projects.indexOf(project)} key={`slide${projects.indexOf(project)}`} />

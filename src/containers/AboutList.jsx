@@ -3,22 +3,17 @@ import InfoElement from '@components/InfoElement';
 import ModalComponent from '@components/Modal';
 import styles from '@styles/AboutList.module.scss';
 import { useState } from 'react';
-import sources from 'assets/resources';
 import { memo } from 'react';
-const AboutList = () => {
+
+const AboutList = ({ images }) => {
   let renderedimages = [];
-  {
-    for (const element in sources) {
-      if (Object.hasOwnProperty.call(sources, element)) {
-        const url = sources[element];
-        renderedimages.push(
-          <div className={styles['techImage']} key={`img${element}`}>
-            <img src={url} layout="fill" alt={element} />
-          </div>
-        );
-      }
-    }
-  }
+  images.forEach((element) => {
+    renderedimages.push(
+      <div className={styles['techImage']} key={`img${element}`}>
+        <img src={element} layout="fill" alt={element} />
+      </div>
+    );
+  });
 
   const [modal, setModal] = useState({ open: false, success: null, content: null });
 
@@ -26,7 +21,7 @@ const AboutList = () => {
     <>
       <div className={styles['img_container']} id="profile">
         <div className={styles['img_border']} />
-        <img src="/aboutimg.jpg" layout="fill" alt="foto mia" className={styles['avatar']} />
+        <img src="/aboutimg.png" layout="fill" alt="profile picture" className={styles['avatar']} />
       </div>
       <section>
         <InfoElement

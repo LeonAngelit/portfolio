@@ -1,8 +1,23 @@
 import SlidesContainer from '@containers/Slides';
 import AboutList from '@containers/AboutList';
 import styles from '@styles/Index.module.scss';
+import fs from 'fs';
+import path from 'path';
 
-export default function Home() {
+export async function getStaticProps() {
+  const imagesDir = path.join(process.cwd(), 'public', 'images');
+  const files = fs.readdirSync(imagesDir);
+
+  const svgFiles = files.filter((file) => file.endsWith('.svg'));
+  const imagePaths = svgFiles.map((file) => `/images/${file}`);
+  return {
+    props: {
+      imagePaths,
+    },
+  };
+}
+
+export default function Home({ imagePaths }) {
   return (
     <>
       <div className={styles['container']}>
@@ -62,13 +77,13 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="/photo_2020-03-01_16-51-23.jpg" alt="" />
+            <img className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="/portada.png" alt="" />
           </div>
         </div>
         <div className="block lg:w-full lg:h-2/6 padding pb-6 mx-auto mt-40 lg:whitespace-nowrap lg:overflow-hidden lg:animate-type">
           <p className="text-center font-mono text-7xl text-stone-400 leading-relaxed">Software developer: Doing what I love</p>
         </div>
-        <AboutList />
+        <AboutList images={imagePaths} />
         <SlidesContainer />
       </div>
     </>
