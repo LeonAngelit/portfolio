@@ -45,7 +45,7 @@ const AboutList = ({ images }) => {
           content={
             <ul>
               <li key="li1">
-                <p>🇬🇧 Inglés: B2 Universidad de Sevilla</p>
+                <p>🇬🇧 Inglés: B2-C1</p>
               </li>
               <li key="li2">
                 <p>🇪🇸 Español: Nativo </p>
