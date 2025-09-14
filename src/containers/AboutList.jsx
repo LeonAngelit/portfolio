@@ -90,10 +90,10 @@ const AboutList = ({ images }) => {
         />
       </section>
       <section className={styles['info_container']} id="projectsSection">
-        <InfoElement title={'Proyectos'} content={<SlidesContainer />} collapse={false} key={'Info5'} />
+        <InfoElement title={'Proyectos'} content={<SlidesContainer />} collapse={true} key={'Info5'} />
       </section>
       <section className={styles['info_container']} id="contactSection">
-        <InfoElement title={'Contacto'} content={<ContactForm handleModal={setModal} />} collapse={false} key={'Info6'} />
+        <InfoElement title={'Contacto'} content={<ContactForm handleModal={setModal} />} collapse={true} key={'Info6'} />
       </section>
       {modal.open && <ModalComponent visible={modal.open} success={modal.success} content={modal.content} handleClick={() => setModal(false)} />}
     </>
