@@ -1,6 +1,7 @@
 import ContactForm from '@components/ContactForm';
 import InfoElement from '@components/InfoElement';
 import ModalComponent from '@components/Modal';
+import SlidesContainer from '@containers/Slides';
 import styles from '@styles/AboutList.module.scss';
 import { useState } from 'react';
 import { memo } from 'react';
@@ -88,8 +89,11 @@ const AboutList = ({ images }) => {
           key={'Info4'}
         />
       </section>
+      <section className={styles['info_container']} id="projectsSection">
+        <InfoElement title={'Proyectos'} content={<SlidesContainer />} collapse={false} key={'Info5'} />
+      </section>
       <section className={styles['info_container']} id="contactSection">
-        <InfoElement title={'Contacto'} content={<ContactForm handleModal={setModal} />} collapse={false} key={'Info5'} />
+        <InfoElement title={'Contacto'} content={<ContactForm handleModal={setModal} />} collapse={false} key={'Info6'} />
       </section>
       {modal.open && <ModalComponent visible={modal.open} success={modal.success} content={modal.content} handleClick={() => setModal(false)} />}
     </>

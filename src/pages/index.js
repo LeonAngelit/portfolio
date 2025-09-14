@@ -1,4 +1,3 @@
-import SlidesContainer from '@containers/Slides';
 import AboutList from '@containers/AboutList';
 import styles from '@styles/Index.module.scss';
 import fs from 'fs';
@@ -84,7 +83,6 @@ export default function Home({ imagePaths }) {
           <p className="text-center font-mono text-7xl text-stone-400 leading-relaxed">Software developer: Doing what I love</p>
         </div>
         <AboutList images={imagePaths} />
-        <SlidesContainer />
       </div>
     </>
   );
